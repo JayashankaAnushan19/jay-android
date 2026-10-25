@@ -1,0 +1,12 @@
+<resources>
+    <color name="brand">#4F46E5</color>
+    <color name="brand_dark">#3730A3</color>
+    <color name="brand_light">#A5B4FC</color>
+    <color name="icon_tile">#EEF0FF</color>
+    <color name="surface">#F7F7FB</color>
+    <color name="card">#FFFFFF</color>
+    <color name="text_primary">#1C1B22</color>
+    <color name="text_secondary">#6B6B78</color>
+    <color name="warning_bg">#FFF4E5</color>
+    <color name="warning_text">#8A4B00</color>
+</resources>

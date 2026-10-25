@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Plain layoutAnimation: RecyclerView doesn't supply the parameters gridLayoutAnimation needs. -->
+<layoutAnimation xmlns:android="http://schemas.android.com/apk/res/android"
+    android:animation="@anim/card_in"
+    android:animationOrder="normal"
+    android:delay="12%" />

@@ -1,0 +1,6 @@
+<resources>
+    <!-- Android 12+ launch splash: Jay icon on the brand colour. -->
+    <style name="Theme.Jay" parent="Base.Theme.Jay">
+        <item name="android:windowSplashScreenBackground">@color/brand_dark</item>
+    </style>
+</resources>

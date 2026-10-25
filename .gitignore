@@ -1,0 +1,37 @@
+# Gradle / Kotlin build output and caches
+.gradle/
+.kotlin/
+build/
+**/build/
+captures/
+.externalNativeBuild/
+.cxx/
+
+# Machine-specific settings (Android SDK path)
+local.properties
+
+# IDE files
+.idea/
+*.iml
+.vscode/
+.navigation/
+
+# Built apps — publish these as GitHub Releases instead of committing them
+*.apk
+*.aab
+*.ap_
+output-metadata.json
+
+# Signing keys and their passwords — never commit these
+keystore.properties
+*.jks
+*.keystore
+
+# Logs and OS clutter
+*.log
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Stray placeholder file
+/empty

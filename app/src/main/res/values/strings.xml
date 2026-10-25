@@ -1,0 +1,83 @@
+<resources>
+    <string name="app_name">Jay</string>
+    <string name="home_title">Welcome to my world</string>
+    <string name="home_subtitle">Portfolio, projects and more — all in one place</string>
+    <string name="greeting_morning">Good morning 👋</string>
+    <string name="greeting_afternoon">Good afternoon 👋</string>
+    <string name="greeting_evening">Good evening 👋</string>
+    <string name="crash_title">Jay closed unexpectedly last time</string>
+    <string name="close">Close</string>
+    <string name="copy">Copy</string>
+    <string name="settings">Settings</string>
+    <string name="empty_home">No websites yet.\nOpen Settings to add one.</string>
+    <string name="open_settings">Open Settings</string>
+
+    <string name="refresh">Refresh</string>
+    <string name="open_in_browser">Open in browser</string>
+    <string name="share">Share link</string>
+    <string name="copy_link">Copy link</string>
+    <string name="link_copied">Link copied</string>
+    <string name="retry">Retry</string>
+    <string name="no_internet_title">No internet connection</string>
+    <string name="no_internet_msg">Check your Wi-Fi or mobile data and try again.</string>
+    <string name="no_internet_short">You\'re offline</string>
+    <string name="load_error_title">Something went wrong</string>
+    <string name="load_error_msg">This page couldn\'t be opened right now. Please try again in a moment.</string>
+    <string name="no_app_to_open">No app found to open this link</string>
+    <string name="download_in_browser">Downloads open in your browser</string>
+
+    <string name="admin_login">Admin login</string>
+    <string name="password">Password</string>
+    <string name="unlock">Unlock</string>
+    <string name="cancel">Cancel</string>
+    <string name="wrong_password">Wrong password</string>
+    <string name="locked_out">Too many attempts. Try again in %d seconds.</string>
+    <string name="default_password_hint">First time? The default password is \"admin\". Please change it after logging in.</string>
+    <string name="default_password_warning">You are still using the default password. Tap \"Change password\" to secure the admin panel.</string>
+
+    <string name="manage_websites">Websites</string>
+    <string name="manage_hint">Drag ≡ to reorder · switch to show or hide · tap to edit</string>
+    <string name="add_website">Add website</string>
+    <string name="edit_website">Edit website</string>
+    <string name="website_name">Name</string>
+    <string name="website_url">URL (e.g. https://example.com)</string>
+    <string name="website_description">Short description (optional)</string>
+    <string name="website_icon">Image link (https://…)</string>
+    <string name="icon">Icon</string>
+    <string name="icon_gallery">Gallery</string>
+    <string name="icon_avatar">Avatar</string>
+    <string name="icon_link">Image link</string>
+    <string name="icon_site">Site icon</string>
+    <string name="icon_letter">Letter</string>
+    <string name="choose_avatar">Choose an avatar</string>
+    <string name="icon_failed">Couldn\'t use that image</string>
+    <string name="site_icon_needs_url">Enter the website URL first</string>
+    <string name="save">Save</string>
+    <string name="delete">Delete</string>
+    <string name="delete_confirm">Delete \"%s\"?</string>
+    <string name="deleted">Deleted</string>
+    <string name="undo">Undo</string>
+    <string name="error_name_required">Name is required</string>
+    <string name="error_invalid_url">Enter a valid web address</string>
+    <string name="no_websites_admin">No websites yet. Tap \"Add website\" to create one.</string>
+    <string name="hidden">Hidden</string>
+
+    <string name="change_password">Change password</string>
+    <string name="current_password">Current password</string>
+    <string name="new_password">New password</string>
+    <string name="confirm_password">Confirm new password</string>
+    <string name="password_too_short">Use at least %d characters</string>
+    <string name="passwords_dont_match">Passwords don\'t match</string>
+    <string name="password_changed">Password changed</string>
+
+    <string name="backup">Backup</string>
+    <string name="export_links">Export websites</string>
+    <string name="import_links">Import websites</string>
+    <string name="exported">Websites exported</string>
+    <string name="imported">%d websites imported</string>
+    <string name="import_failed">That file isn\'t a valid Jay backup</string>
+    <string name="import_confirm">Importing replaces your current website list. Continue?</string>
+    <string name="import_action">Import</string>
+    <string name="lock">Lock</string>
+    <string name="about">Jay · version %s</string>
+</resources>

@@ -1,0 +1,41 @@
+<resources>
+    <style name="Base.Theme.Jay" parent="Theme.Material3.DayNight">
+        <item name="colorPrimary">@color/brand</item>
+        <item name="colorSecondary">@color/brand</item>
+        <item name="colorPrimaryContainer">@color/icon_tile</item>
+        <item name="android:colorBackground">@color/surface</item>
+        <item name="colorSurface">@color/surface</item>
+        <item name="actionBarStyle">@style/Jay.ActionBar</item>
+        <item name="actionBarTheme">@style/ThemeOverlay.Material3.Dark.ActionBar</item>
+        <item name="android:statusBarColor">@color/brand_dark</item>
+        <item name="android:windowLightStatusBar">false</item>
+        <item name="android:windowActivityTransitions">true</item>
+    </style>
+
+    <style name="Theme.Jay" parent="Base.Theme.Jay" />
+
+    <style name="Theme.Jay.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="Jay.ActionBar" parent="Widget.Material3.ActionBar.Solid">
+        <item name="background">@color/brand_dark</item>
+        <item name="titleTextStyle">@style/Jay.ActionBar.Title</item>
+        <item name="subtitleTextStyle">@style/Jay.ActionBar.Subtitle</item>
+        <item name="elevation">0dp</item>
+    </style>
+
+    <style name="Jay.ActionBar.Title" parent="TextAppearance.Material3.TitleLarge">
+        <item name="android:textColor">#FFFFFF</item>
+    </style>
+
+    <style name="Jay.ActionBar.Subtitle" parent="TextAppearance.Material3.BodySmall">
+        <item name="android:textColor">#D0D0FF</item>
+    </style>
+
+    <style name="ShapeAppearance.Jay.Tile" parent="">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">30%</item>
+    </style>
+</resources>
