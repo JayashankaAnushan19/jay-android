@@ -99,6 +99,65 @@ keyPassword=your-key-password
 
 Then run `./gradlew assembleRelease`. The release build is shrunk with R8 and signed with your key. Keep the keystore safe, because you need the same key for every future update.
 
+## Making changes and building a new APK
+
+> You only need to change code to change how the app **works or looks**. Adding, editing or removing websites is done inside the app (Settings ⚙) and needs no new APK.
+
+### 1. Find what to edit
+
+| I want to change… | Edit this |
+|---|---|
+| Texts (titles, greetings, messages, button labels) | `app/src/main/res/values/strings.xml` |
+| Colours (light / dark mode) | `res/values/colors.xml` / `res/values-night/colors.xml` |
+| Home screen header and layout | `res/layout/activity_main.xml` + `ui/MainActivity.kt` |
+| Website cards on the home screen | `res/layout/item_website.xml` |
+| In-app viewer (loading screen, errors, menu) | `res/layout/activity_webview.xml` + `ui/WebViewActivity.kt` |
+| Admin panel and the add/edit website form | `ui/SettingsActivity.kt` + `res/layout/dialog_website.xml` |
+| Built-in avatars and their colours | `ui/Avatars.kt` (+ an icon file in `res/drawable/`) |
+| Websites a fresh install starts with | `seedDefaults()` in `data/WebsiteRepository.kt` |
+| Default admin password, lockout rules | `data/AdminAuth.kt` |
+| App icon | `res/mipmap-*/` images and `res/drawable/ic_launcher_background.xml` |
+| App name | `app_name` in `res/values/strings.xml` |
+
+### 2. Bump the version
+
+In `app/build.gradle.kts`, increase both numbers:
+
+```kotlin
+versionCode = 4        // whole number, +1 every release
+versionName = "1.3"    // the version people see
+```
+
+Android only installs the new APK over the old one if `versionCode` is higher.
+
+### 3. Build the APK
+
+```bash
+./gradlew assembleDebug        # Windows: gradlew.bat assembleDebug
+```
+
+You can also click **Build → Build App Bundle(s) / APK(s) → Build APK(s)** in Android Studio.
+
+The new APK is created at `app/build/outputs/apk/debug/app-debug.apk`. If the build fails, the error message names the file and line to fix.
+
+### 4. Install and test it
+
+- Copy the APK to your phone and open it. It installs as an update, and saved websites and the password stay.
+- Or, with the phone plugged in and USB debugging turned on: `adb install -r app/build/outputs/apk/debug/app-debug.apk`.
+- If the app ever crashes, the next launch shows the error details with a **Copy** button.
+
+> **Keep using the same signing key.** Android only accepts an update if it's signed with the same key as the installed app. Debug builds use the debug key on the computer that built them, so an APK built on a different computer won't install over the old one. Either uninstall first (this erases the saved websites, so export them first) or use a [release key](#signed-release-build-optional) for every build.
+
+### 5. Publish it
+
+```bash
+git add .
+git commit -m "Describe what you changed"
+git push
+```
+
+Then create a new GitHub **Release** (tag e.g. `v1.3`) and attach the APK.
+
 ## Project structure
 
 ```
